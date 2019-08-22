@@ -2,7 +2,7 @@
   "name": "react-keycloak",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "/keycloak-react-demo-v1",
   "dependencies": {
     "keycloak-js": "^6.0.1",
     "react": "^16.8.6",
