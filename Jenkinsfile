@@ -5,6 +5,7 @@ rhapsodyUtils.standardPipelineProperties();
 Service s = Service.KEYCLOAK_REACT_DEMO;
 DockerBuildPipeline pipeline = new DockerBuildPipeline(this, s, env, "1.0.0");
 
+
 pipeline.standardTemplate { label ->
 try {
   node(label) {
