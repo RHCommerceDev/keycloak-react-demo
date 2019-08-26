@@ -3,7 +3,7 @@ envVars:
   API_TIMEOUT: 10000
   NODE_ENV: development
   DEBUG: "*"
-  REACT_APP_KEYCLOAK_URL: https://keycloak.internal.rhapsodynonprod.com/auth
+  REACT_APP_KEYCLOAK_URL: https://keycloak.internal.rhapsodysandbox3.net/auth
 service:
   name: keycloak-react-demo
   internalPort: 3000
