@@ -1,7 +1,9 @@
 ## Overview
 This project is a simple sample React app that is integrated with our nonprod Keycloak auth server.
 
-It was based upon the following project: https://github.com/akoserwal/keycloak-integrations/tree/master/react-keycloak
+It was based upon the following article and project: 
+https://medium.com/keycloak/secure-react-app-with-keycloak-4a65614f7be2
+https://github.com/akoserwal/keycloak-integrations/tree/master/react-keycloak
 
 ###
 
