@@ -1,7 +1,6 @@
 createIngress: true
 ingress:
-  internal: false
-  external: false
+  external: true
 service:
   apiversion: v1
   externalPort: 3000
