@@ -7,9 +7,11 @@ import * as Keycloak from 'keycloak-js'
 
 //keycloak init options
 let initOptions = {
-    url:  'https://keycloak.internal.rhapsodynonprod.com/auth', realm: 'development', clientId: 'react-test-app', onLoad: 'login-required'
+    url:  'https://keycloak.rhapsodynonprod.com/auth',
+    realm: 'development',
+    clientId: 'react-test-app',
+    onLoad: 'login-required'
 }
-
 
 let keycloak = Keycloak(initOptions);
 
