@@ -9,8 +9,8 @@ import * as Keycloak from 'keycloak-js'
 let initOptions = {
     url:  'https://auth.rhapsodynonprod.restorationhardware.com/auth',
     //url:  'https://keycloak.internal.rhapsodysandbox3.net/auth',
-    realm: 'internal-development',
-    clientId: 'rh-concierge-frontend',
+    realm: 'development',
+    clientId: 'react-test-app',
     onLoad: 'login-required'
 }
 
