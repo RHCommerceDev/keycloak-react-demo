@@ -1,0 +1,16 @@
+envVars:
+  API_TIMEOUT: 10000
+  NODE_ENV: development
+  DEBUG: "*"
+service:
+  name: keycloak-react-demo
+  internalPort: 3000
+  apiversion: v1
+  version: 0.0.1
+  livenessProbe:
+    path: /
+  readinessProbe:
+    path: /
+replicaCount: 1
+scaling:
+  enabled: false

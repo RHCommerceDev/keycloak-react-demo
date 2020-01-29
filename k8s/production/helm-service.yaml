@@ -1,0 +1,11 @@
+createIngress: true
+ingress:
+  internal: true
+  external: true
+  legacy: true
+service:
+  apiversion: v1
+  externalPort: 3000
+  internalPort: 3000
+  name: keycloak-react-demo
+  metricsType: none
