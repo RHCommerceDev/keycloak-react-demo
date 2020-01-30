@@ -7,12 +7,12 @@ import * as Keycloak from 'keycloak-js'
 
 //keycloak init options
 let initOptions = {
-    url:  'https://auth.rhapsody.restorationhardware.com/auth',
-    //url:  'https://auth.rhapsodynonprod.restorationhardware.com/auth',
+    //url:  'https://auth.rhapsody.restorationhardware.com/auth',
+    url:  'https://auth.rhapsodynonprod.restorationhardware.com/auth',
     //url:  'https://keycloak.internal.rhapsodysandbox3.net/auth',
-    realm: 'production',
-    //clientId: 'react-test-app',
-    clientId: 'rh-mobile-frontend',
+    realm: 'development',
+    clientId: 'react-test-app',
+    //clientId: 'rh-mobile-frontend',
     onLoad: 'login-required'
 }
 
