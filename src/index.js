@@ -13,7 +13,8 @@ let initOptions = {
     realm: 'development',
     clientId: 'react-test-app-pkce',
     //clientId: 'rh-mobile-frontend',
-    onLoad: 'login-required'
+    onLoad: 'login-required',
+    pkceMethod: 'S256'
 }
 
 let keycloak = Keycloak(initOptions);
