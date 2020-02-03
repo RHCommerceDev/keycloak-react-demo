@@ -14,7 +14,8 @@ let initOptions = {
     clientId: 'react-test-app-pkce',
     //clientId: 'rh-mobile-frontend',
     onLoad: 'login-required',
-    pkceMethod: 'S256'
+    pkceMethod: 'S256',
+    promiseType: 'native'
 }
 
 let keycloak = Keycloak(initOptions);
