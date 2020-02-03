@@ -15,7 +15,7 @@ let initOptions = {
     //clientId: 'rh-mobile-frontend',
     onLoad: 'login-required',
     pkceMethod: 'S256',
-    promiseType: 'native'
+    //promiseType: 'native'
 }
 
 let keycloak = Keycloak(initOptions);
