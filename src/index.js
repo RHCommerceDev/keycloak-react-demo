@@ -11,10 +11,10 @@ let initOptions = {
     url:  'https://auth.rhapsodynonprod.restorationhardware.com/auth',
     //url:  'https://keycloak.internal.rhapsodysandbox3.net/auth',
     realm: 'development',
-    clientId: 'react-test-app',
+    clientId: 'react-test-app-pkce',
     //clientId: 'rh-mobile-frontend',
     onLoad: 'login-required',
-    //pkceMethod: 'S256',
+    pkceMethod: 'S256',
     //promiseType: 'native'
 }
 
