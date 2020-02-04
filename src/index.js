@@ -20,7 +20,7 @@ let initOptions = {
 
 let keycloak = Keycloak(initOptions);
 
-keycloak.init({ onLoad: initOptions.onLoad, promiseType: 'native', pkceMethod: 'S256' }).success((auth) => {
+keycloak.init({ onLoad: initOptions.onLoad, promiseType: 'native', pkceMethod: 'S256' }).then((auth) => {
 
     if (!auth) {
         window.location.reload();
