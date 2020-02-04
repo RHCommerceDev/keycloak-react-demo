@@ -49,8 +49,6 @@ keycloak.init({ onLoad: initOptions.onLoad, promiseType: 'native', pkceMethod: '
 
     }, 60000)
 
-}).error(() => {
-    console.error("Authenticated Failed");
 });
 
 
