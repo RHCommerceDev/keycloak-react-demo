@@ -11,16 +11,17 @@ let initOptions = {
     url:  'https://auth.rhapsodynonprod.restorationhardware.com/auth',
     //url:  'https://keycloak.internal.rhapsodysandbox3.net/auth',
     realm: 'development',
-    clientId: 'react-test-app-pkce',
+    clientId: 'react-test-app',
     //clientId: 'rh-mobile-frontend',
     onLoad: 'login-required',
-    pkceMethod: 'S256',
+    //pkceMethod: 'S256',
     //promiseType: 'native'
 }
 
 let keycloak = Keycloak(initOptions);
 
-keycloak.init({ onLoad: initOptions.onLoad, promiseType: 'native', pkceMethod: 'S256' }).then((auth) => {
+//keycloak.init({ onLoad: initOptions.onLoad, pkceMethod: 'S256' }).success((auth) => {
+keycloak.init({ onLoad: initOptions.onLoad }).success((auth) => {
 
     if (!auth) {
         window.location.reload();
@@ -48,7 +49,9 @@ keycloak.init({ onLoad: initOptions.onLoad, promiseType: 'native', pkceMethod: '
 
 
     }, 60000)
-
+  }).error(() => {
+      console.error("Authenticated Failed");
+  });
 });
 
 
