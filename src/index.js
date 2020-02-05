@@ -51,7 +51,6 @@ keycloak.init({ onLoad: initOptions.onLoad }).success((auth) => {
     }, 60000)
   }).error(() => {
       console.error("Authenticated Failed");
-  });
 });
 
 
