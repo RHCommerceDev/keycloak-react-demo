@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import * as Keycloak from 'keycloak-js';
+import axios from 'axios';
+
+window.onload = initSession();
 
 //keycloak init options
 let initOptions = {
@@ -53,6 +56,20 @@ keycloak.init({ onLoad: initOptions.onLoad }).success((auth) => {
       console.error("Authenticated Failed");
 });
 
+function initSession () {
+  console.log("Initializing ATG session");
+  // curl -v -X POST -H "content-type: application/json" -H "user-agent: (iPhone; CPU rh-mobile-internal-only OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1" -d '{"operationName":"SessionConf","variables":{},"query":"query SessionConf {  sessionConf {    sessionConfirmation    sessionId  }}"}' https://stg4-www.restorationhardware.com/rh-experience-layer-v1/graphql
+  axios.post('https://stg4-www.restorationhardware.com/rh-experience-layer-v1/graphql',
+  {
+    headers: {'content-type': 'application/json', 'user-agent': '(iPhone; CPU rh-mobile-internal-only OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1'},
+    data: {
+      operationName: 'SessionConf',
+      variables: {},
+      query: 'query SessionConf {  sessionConf {    sessionConfirmation    sessionId  }}'
+    }
+  })
+  .then(response => console.log(response))
+}
 
 
 // If you want your app to work offline and load faster, you can change

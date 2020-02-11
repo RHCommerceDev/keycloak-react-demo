@@ -8,6 +8,7 @@ import './App.css';
 //import { withCookies } from 'react-cookie';
 
 function App() {
+  //initSession();
   return (
     <div className="App">
       <header className="App-header">
@@ -47,7 +48,7 @@ function App() {
   );
 }
 
-initSession () {
+function initSession () {
   // curl -v -X POST -H "content-type: application/json" -H "user-agent: (iPhone; CPU rh-mobile-internal-only OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1" -d '{"operationName":"SessionConf","variables":{},"query":"query SessionConf {  sessionConf {    sessionConfirmation    sessionId  }}"}' https://stg4-www.restorationhardware.com/rh-experience-layer-v1/graphql
   axios.post('https://stg4-www.restorationhardware.com/rh-experience-layer-v1/graphql',
   {
