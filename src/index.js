@@ -6,14 +6,14 @@ import * as serviceWorker from './serviceWorker';
 import * as Keycloak from 'keycloak-js';
 import axios from 'axios';
 
-window.onload = initSession();
+//window.onload = initSession();
 
 //keycloak init options
 let initOptions = {
     //url:  'https://auth.rhapsody.restorationhardware.com/auth',
     url:  'https://auth.rhapsodynonprod.restorationhardware.com/auth',
     //url:  'https://keycloak.internal.rhapsodysandbox3.net/auth',
-    realm: 'development',
+    realm: 'internal-development',
     clientId: 'react-test-app',
     //clientId: 'rh-mobile-frontend',
     onLoad: 'login-required',
