@@ -11,11 +11,11 @@ import axios from 'axios';
 //keycloak init options
 let initOptions = {
     //url:  'https://auth.rhapsody.restorationhardware.com/auth',
-    //url:  'https://auth.rhapsodynonprod.restorationhardware.com/auth',
-    url:  'https://keycloak.internal.rhapsodysandbox3.net/auth',
-    realm: 'development',
-    clientId: 'react-test-app',
-    //clientId: 'concierge-app',
+    url:  'https://auth.rhapsodynonprod.restorationhardware.com/auth',
+    //url:  'https://keycloak.internal.rhapsodysandbox3.net/auth',
+    realm: 'concierge-development',
+    //clientId: 'react-test-app',
+    clientId: 'concierge-app',
     //clientId: 'rh-mobile-frontend',
     onLoad: 'login-required',
     //pkceMethod: 'S256',
