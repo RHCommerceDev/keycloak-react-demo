@@ -10,9 +10,9 @@ import axios from 'axios';
 
 //keycloak init options
 let initOptions = {
+    url:  'https://keycloak.internal.rhapsodysandbox3.net/auth',
     //url:  'https://auth.rhapsody.restorationhardware.com/auth',
     //url:  'https://auth.rhapsodynonprod.restorationhardware.com/auth',
-    url:  'https://keycloak.internal.rhapsodysandbox3.net/auth',
     realm: 'development',
     clientId: 'react-test-app',
     //clientId: 'concierge-app',
